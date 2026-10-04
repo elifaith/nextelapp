@@ -1,0 +1,140 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-parcelize")
+}
+
+def configureValue = { propertyName, environmentName, fallback ->
+    project.findProperty(propertyName) ?: System.getenv(environmentName) ?: fallback
+}
+
+def asBuildConfigString = { value ->
+    '"' + value.toString().replace('\\', '\\\\').replace('"', '\\"') + '"'
+}
+
+def productionFrontBaseUrl = configureValue(
+    'nextelFrontBaseUrl', 'NEXTEL_FRONTBASE_URL', 'https://n-calls.com'
+).toString().replaceAll('/+$', '')
+def productionWebBaseUrl = configureValue(
+    'nextelWebBaseUrl', 'NEXTEL_WEB_BASE_URL', 'https://easyportaltopupxyz.com'
+).toString().replaceAll('/+$', '')
+def productionApiBaseUrl = configureValue(
+    'nextelApiBaseUrl', 'NEXTEL_API_BASE_URL', "${productionWebBaseUrl}/api/v1"
+).toString().replaceAll('/+$', '')
+def debugWebBaseUrl = configureValue(
+    'nextelDebugWebBaseUrl', 'NEXTEL_DEBUG_WEB_BASE_URL', 'https://api.n-calls.com'
+).toString().replaceAll('/+$', '')
+def debugApiBaseUrl = configureValue(
+    'nextelDebugApiBaseUrl', 'NEXTEL_DEBUG_API_BASE_URL', "${debugWebBaseUrl}/api/v1"
+).toString().replaceAll('/+$', '')
+
+
+def releaseStoreFile = configureValue('NEXTEL_RELEASE_STORE_FILE', 'NEXTEL_RELEASE_STORE_FILE', 'keystore.jks')
+def releaseStorePassword = configureValue('NEXTEL_RELEASE_STORE_PASSWORD', 'NEXTEL_RELEASE_STORE_PASSWORD', '1qa2ws3ed')
+def releaseKeyAlias = configureValue('NEXTEL_RELEASE_KEY_ALIAS', 'NEXTEL_RELEASE_KEY_ALIAS', 'nextel')
+def releaseKeyPassword = configureValue('NEXTEL_RELEASE_KEY_PASSWORD', 'NEXTEL_RELEASE_KEY_PASSWORD', '1qa2ws3ed')
+def hasReleaseSigning = [releaseStoreFile, releaseStorePassword, releaseKeyAlias, releaseKeyPassword]
+    .every { it != null && !it.toString().trim().isEmpty() }
+
+android {
+    namespace = "pynith.apps.nextel"
+    compileSdkVersion 36
+
+    defaultConfig {
+        applicationId "pynith.apps.nextel"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 4
+        versionName "3.5.alpha"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        buildConfigField "String", "WEB_BASE_URL", asBuildConfigString(productionWebBaseUrl)
+        buildConfigField "String", "API_BASE_URL", asBuildConfigString(productionApiBaseUrl)
+        buildConfigField "String", "FRONTBASE_URL", asBuildConfigString(productionFrontBaseUrl)
+    }
+
+    if (hasReleaseSigning) {
+        signingConfigs {
+            release {
+                storeFile file(releaseStoreFile)
+                storePassword releaseStorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "WEB_BASE_URL", asBuildConfigString(debugWebBaseUrl)
+            buildConfigField "String", "API_BASE_URL", asBuildConfigString(debugApiBaseUrl)
+            buildConfigField "String", "FRONTBASE_URL", asBuildConfigString(productionFrontBaseUrl)
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.annotation:annotation-jvm:1.9.1'
+    implementation 'androidx.core:core-animation:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation "com.github.yalantis:ucrop:2.2.8"
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation "androidx.preference:preference-ktx:1.2.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.12'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation("com.google.zxing:core:3.5.3")
+
+    implementation 'com.daimajia.easing:library:2.4@aar'
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation "androidx.core:core-splashscreen:1.2.0"
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}

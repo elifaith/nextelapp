@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_forum"
+        android:icon="@drawable/ic_sms_chat"
+        android:title="News"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_refresh"
+        android:title="Video"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_discover"
+        android:icon="@drawable/ic_writting_pen"
+        android:title="Discover"
+        app:showAsAction="ifRoom" />
+
+</menu>

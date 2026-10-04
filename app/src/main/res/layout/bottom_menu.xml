@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/menu_bg"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View
+        android:layout_width="60dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_handle"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="24dp"  />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/llyFooter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:padding="0dip">
+
+                <RadioButton
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawableTop="@drawable/games"
+                    android:gravity="center"
+                    android:text="Games"
+                    android:clickable="true"
+                    android:onClick="onGames"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnSettings"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawableTop="@drawable/md_settings"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="appSettingsClick"
+                    android:text="Setting"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnTheme"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawableTop="@drawable/btn_ask_question"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:text="FAQs"
+                    android:onClick="appFAQsClick"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/md_share"
+                    android:gravity="center"
+                    android:drawableTint="@color/colorWhite"
+                    android:text="Share"
+                    android:clickable="true"
+                    android:onClick="onShareClick"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="10dp"  />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="0dip">
+
+                <RadioButton
+                    android:id="@+id/btnStore"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawableTop="@drawable/ic_app"
+                    android:gravity="center"
+                    android:text="Feature"
+                    android:clickable="true"
+                    android:onClick="onStoreClick"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnAbout"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/btn_ask_question"
+                    android:drawableTint="@color/colorWhite"
+                    android:gravity="center"
+                    android:onClick="onAboutUsClick"
+                    android:text="About"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnReminder"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTint="@color/colorWhite"
+                    android:drawableTop="@drawable/ic_writting_pen"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="onSupportClick"
+                    android:text="Support"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/btnExit"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/ic_exit_app"
+                    android:gravity="center"
+                    android:drawableTint="@color/colorWhite"
+                    android:text="Logout"
+                    android:clickable="true"
+                    android:onClick="onExit"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="52dp"  />
+
+</LinearLayout>

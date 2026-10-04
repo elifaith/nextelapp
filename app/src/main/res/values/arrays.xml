@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_entries">
+        <item>dark</item>
+        <item>App Default</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+
+    <string-array translatable="false" name="settings_display_options_size_entries">
+        <item>@string/settings_font_size_tiny</item>
+        <item>@string/settings_font_size_small</item>
+        <item>@string/settings_font_size_medium</item>
+        <item>@string/settings_font_size_large</item>
+        <item>@string/settings_font_size_huge</item>
+    </string-array>
+
+    <string-array translatable="false" name="settings_display_options_size_values">
+        <item>tiny</item>
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>huge</item>
+    </string-array>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Dashboard</item>
+        <item>Features</item>
+        <item>Profile</item>
+        <item>Support</item>
+        <item>Games</item>
+        <item>About</item>
+        <item />
+        <item>Log Out</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_app</item>
+        <item>@drawable/ic_feature</item>
+        <item>@drawable/user_profile</item>
+        <item>@drawable/customer_service</item>
+        <item>@drawable/ic_games</item>
+        <item>@drawable/ic_about</item>
+        <item>0</item>
+        <item>@drawable/ic_exit_app</item>
+    </array>
+
+</resources>

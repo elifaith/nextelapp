@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:background="@drawable/bg_main" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_above="@+id/footerText"
+            android:orientation="vertical" android:background="@drawable/gradient_line" android:layout_width="fill_parent" android:layout_height="fill_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Settings preferences"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent">
+
+                <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/bg_main">
+
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:background="@color/transparent">
+
+                        <FrameLayout android:layout_width="fill_parent" android:layout_height="100.0dip">
+
+                            <View android:background="@drawable/gradient_line" android:id="@+id/tobeset" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+                            <ImageView android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" android:src="@drawable/money"
+                                android:scaleType="centerCrop" android:alpha="0.1" />
+                            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <ImageView android:id="@+id/logo" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="5.0dip" app:srcCompat="@mipmap/ic_launcher"
+                                    tools:ignore="VectorDrawableCompat" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:padding="16dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:background="@color/transparent"
+                            android:layout_height="wrap_content">
+
+                            <!-- BIOMETRIC -->
+                            <include layout="@layout/card_biometric"/>
+
+                            <!-- NOTIFICATION -->
+                            <include layout="@layout/card_notification"/>
+
+                            <!-- SOUND + VIBRATION -->
+                            <include layout="@layout/card_sound"/>
+
+                            <!-- NOTIFICATION -->
+                            <include layout="@layout/card_reminder"/>
+
+                            <!-- THEME -->
+                            <include layout="@layout/card_theme"/>
+
+                            <!-- FONT FAMILY -->
+                            <include layout="@layout/card_font_family"
+                                android:visibility="gone"/>
+
+                            <!-- FONT SIZE -->
+                            <include layout="@layout/card_font"
+                                android:visibility="visible"/>
+
+                            <!-- SUPPORT -->
+                            <include layout="@layout/card_support"/>
+
+                            <!-- LOGOUT -->
+                            <include layout="@layout/card_logout"/>
+
+                            <!-- DELETE -->
+                            <include layout="@layout/card_delete"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footerText"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:textSize="12.0sp" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:layout_marginTop="5dip" android:text="@string/developer" android:alpha="0.9" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

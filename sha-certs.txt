@@ -1,0 +1,30 @@
+Github
+8ed17538ca6da12252a2c0d0d998d6af7c3671aa
+
+Facebook
+6c95131553decb1c1f376cf1df70bb1a
+1610143248998917
+
+Facebook
+271597060370607
+918409e8aebc4e030d4f0d85cca2f743
+
+
+6WmxNPvCvofj+I/9p1f6a7DhFHw=
+
+
+2. Release Certificate (SHA-1 & SHA-256)
+Store: C:\Users\HP\StudioProjects\webapp\app\keystore.jks
+Alias: pynithapp
+MD5: 9B:26:24:3D:E5:42:09:7C:85:51:B3:FE:1F:DD:A0:32
+SHA1: E9:69:B1:34:FB:C2:BE:87:E3:F8:8F:FD:A7:57:FA:6B:B0:E1:14:7C
+SHA-256: 5F:FE:F6:49:02:85:E7:B4:BA:AA:E5:EC:32:F5:B5:4C:8D:37:90:DC:63:F5:B2:B3:3D:CA:E9:1D:A2:89:4D:B7
+
+
+Debug Certificate (SHA-1 & SHA-256)
+Config: debug
+Store: C:\Users\HP\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: DF:A7:8C:51:CD:F2:12:06:22:46:B0:8C:35:B3:09:3B
+SHA1: CA:0E:03:FE:C9:99:A0:C1:4D:5E:07:F0:4F:BA:61:29:ED:1C:8F:EF
+SHA-256: 96:68:4A:21:E3:81:77:77:97:99:C7:B1:44:77:0B:01:19:99:28:66:EA:AD:A0:7B:C5:77:24:5E:91:3C:A2:D2

@@ -1,0 +1,141 @@
+<resources>
+    <!-- LIGHT THEME -->
+    <style name="Theme.MyApp.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorOnPrimary">@color/brand_surface</item>
+        <item name="colorOnSecondary">@color/brand_primary</item>
+
+        <item name="android:colorBackground">@color/brand_background</item>
+        <item name="android:windowBackground">@color/brand_background</item>
+        <item name="colorOnBackground">@color/brand_text</item>
+        <item name="android:textColor">@color/brand_text</item>
+
+        <item name="android:statusBarColor">@color/brand_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/brand_surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="toolbarStyle">@style/LightToolbar</item>
+
+        <item name="android:fontFamily">@font/patrick</item>
+        <item name="fontFamily">@font/patrick</item>
+
+        <item name="gradientStart">@color/brand_primary</item>
+        <item name="gradientEnd">@color/brand_background</item>
+
+        <item name="card_bg_start">#B318443E</item>
+        <item name="card_bg_end">#B348948A</item>
+        <item name="bg_curve_start">#AA48948A</item>
+
+        <item name="colorRed">@color/brand_danger</item>
+        <item name="colorAccent">@color/brand_secondary</item>
+        <item name="colorWhite">@color/brand_surface</item>
+        <item name="colorPrimaryDark">@color/brand_primary</item>
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorCardBg">@color/brand_surface</item>
+
+        <item name="theme_black">@color/brand_text</item>
+
+        <item name="txtColor">@color/brand_text</item>
+        <item name="txtLight">@color/brand_muted</item>
+
+    </style>
+
+    <style name="LightToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/brand_primary</item>
+        <item name="titleTextColor">@color/brand_surface</item>
+    </style>
+
+
+    <!-- DARK THEME -->
+    <style name="Theme.MyApp.Dark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorOnPrimary">#381E72</item>
+
+        <item name="colorOnSecondary">#332D41</item>
+
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorOnBackground">#E6E1E5</item>
+
+        <item name="android:textColor">#E6E1E5</item>
+        <item name="android:statusBarColor">@color/dark_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="toolbarStyle">@style/DarkToolbar</item>
+
+        <item name="android:fontFamily">@font/patrick</item>
+        <item name="fontFamily">@font/patrick</item>
+
+        <item name="gradientStart">#000000</item>
+        <item name="gradientEnd">#333333</item>
+
+        <item name="card_bg_start">#B3000000</item>
+        <item name="card_bg_end">#B3333333</item>
+        <item name="bg_curve_start">#AA333333</item>
+
+        <item name="colorRed">@color/dark_red</item>
+        <item name="colorWhite">@color/dark_text</item>
+        <item name="colorAccent">@color/dark_accent</item>
+        <item name="colorPrimaryDark">@color/dark_primary_dark</item>
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorSecondary">@color/dark_secondary</item>
+        <item name="colorCardBg">@color/dark_card_bg</item>
+
+        <item name="theme_black">@color/colorWhite</item>
+
+        <item name="txtColor">@color/brand_secondary</item>
+        <item name="txtLight">@color/txt_light</item>
+
+    </style>
+
+    <style name="DarkToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/dark_primary</item>
+        <item name="titleTextColor">#FFFFFF</item>
+    </style>
+
+    <!-- BLUE THEME -->
+    <style name="Theme.MyApp.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorOnSecondary">#003C8F</item>
+
+        <item name="android:colorBackground">#E3F2FD</item>
+        <item name="colorOnBackground">#0D47A1</item>
+
+        <item name="android:textColor">#0D47A1</item>
+        <item name="android:statusBarColor">@color/blue_secondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="toolbarStyle">@style/BlueToolbar</item>
+
+        <item name="android:fontFamily">@font/patrick</item>
+        <item name="fontFamily">@font/patrick</item>
+
+        <item name="gradientStart">#1565C0</item>
+        <item name="gradientEnd">#42A5F5</item>
+
+        <item name="card_bg_start">#B31565C0</item>
+        <item name="card_bg_end">#B342A5F5</item>
+        <item name="bg_curve_start">#AA42A5F5</item>
+
+        <item name="colorRed">@color/blue_red</item>
+        <item name="colorWhite">@color/blue_text</item>
+        <item name="colorAccent">@color/blue_accent</item>
+        <item name="colorPrimaryDark">@color/blue_primary_dark</item>
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorSecondary">@color/blue_secondary</item>
+        <item name="colorCardBg">@color/blue_card_bg</item>
+
+        <item name="theme_black">@color/blue_primary</item>
+
+        <item name="txtColor">#e8ecf4</item>
+        <item name="txtLight">#a4b5cf</item>
+
+    </style>
+
+    <style name="BlueToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/blue_primary</item>
+        <item name="titleTextColor">#FFFFFF</item>
+    </style>
+
+
+</resources>

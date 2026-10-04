@@ -1,0 +1,21 @@
+<resources>
+    <attr name="gradientStart" format="color"/>
+    <attr name="gradientEnd" format="color"/>
+
+    <attr name="card_bg_start" format="color"/>
+    <attr name="card_bg_end" format="color"/>
+    <attr name="bg_curve_start" format="color"/>
+
+    <attr name="colorRed" format="color"/>
+    <attr name="colorWhite" format="color"/>
+    <attr name="colorAccent" format="color"/>
+    <attr name="colorPrimary" format="color"/>
+    <attr name="colorPrimaryDark" format="color"/>
+    <attr name="colorSecondary" format="color"/>
+    <attr name="colorCardBg" format="color"/>
+
+    <attr name="theme_black" format="color"/>
+    <attr name="txtColor" format="color"/>
+    <attr name="txtLight" format="color"/>
+
+</resources>

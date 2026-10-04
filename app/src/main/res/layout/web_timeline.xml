@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_webview"
+            android:keepScreenOn="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:hardwareAccelerated="false"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_splash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="#80000000">
+                <View
+                    android:id="@+id/view_splash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_main"/>
+
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="139dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:id="@+id/app_name"
+                    android:layout_below="@+id/app_logo"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <ProgressBar
+                    android:id="@+id/imageView"
+                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+                    android:layout_marginTop="180dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:indeterminate="true"
+                    android:layout_below="@+id/app_name"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateDrawable="@drawable/progress"
+                    android:layout_gravity="center"/>
+
+                <!--WebView
+                    android:id="@+id/imageViw"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/app_name"
+                    android:visibility="visible"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@mipmap/loading"
+                    android:src="@mipmap/loading" /-->
+
+                <LinearLayout
+                    android:id="@+id/layout_footer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Made with"
+                        android:textColor="@color/colorWhite"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="visible"
+                        app:tint="@color/colorRed"
+                        app:srcCompat="@drawable/ic_love"
+                        android:src="@drawable/ic_love" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="#80000000">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha=".90"
+                    android:background="@drawable/bg_main"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_no_internet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="139dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/ic_warning" />
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Whoops!"
+                    android:layout_below="@+id/img_no_internet"
+                    android:layout_marginTop="20dp"
+                    android:textSize="35dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/txt_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:text="No internet found. \nCheck your connection or try again"/>
+
+                <Button
+                    android:id="@+id/btn_try_again"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_style"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_below="@+id/txt_detail"
+                    android:text="Try Again"/>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:progressDrawable="@drawable/cs_custom_progressbar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal" />
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="?attr/colorPrimaryDark"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_more"
+            android:tint="?attr/colorWhite"
+            app:fabSize="mini"
+            app:elevation="6dp"
+            app:layout_anchorGravity="bottom|end" />
+
+    </RelativeLayout>
+
+</layout>

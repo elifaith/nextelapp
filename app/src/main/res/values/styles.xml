@@ -1,0 +1,99 @@
+<resources>
+    <style name="Widget.Nextel.TextInputLayout"
+        parent="Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <item name="boxBackgroundColor">@color/nextel_input</item>
+        <item name="boxStrokeColor">@color/nextel_yellow</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="hintTextColor">@color/nextel_gray</item>
+        <item name="endIconTint">@color/nextel_gray</item>
+
+    </style>
+
+    <style
+        name="NextelTextInputLayout"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxBackgroundColor">@color/background</item>
+
+        <item name="boxCornerRadiusTopStart">15dp</item>
+        <item name="boxCornerRadiusTopEnd">15dp</item>
+        <item name="boxCornerRadiusBottomStart">15dp</item>
+        <item name="boxCornerRadiusBottomEnd">15dp</item>
+
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+        <item name="boxStrokeColor">@color/input_border</item>
+
+        <item name="hintTextColor">#999999</item>
+
+        <item name="startIconTint">#929292</item>
+        <item name="endIconTint">#929292</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryDark">@color/brand_primary</item>
+        <item name="colorAccent">@color/brand_secondary</item>
+        <item name="background">@color/brand_background</item>
+        <item name="android:colorBackground">@color/brand_background</item>
+        <item name="android:windowBackground">@color/brand_background</item>
+        <item name="android:statusBarColor">@color/brand_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/brand_surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Theme.MyApp.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@drawable/side_bar_image</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_outer</item>
+        <item name="android:windowBackground">@drawable/side_bar_image</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+    </style>
+
+    <style name="BottomNavigationBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryDark">@color/brand_primary</item>
+        <item name="colorAccent">@color/brand_secondary</item>
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Transparent Bottom Sheet Dialog -->
+    <style name="TransparentBottomSheetDialog"
+        parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+
+        <item name="bottomSheetStyle">
+            @style/TransparentBottomSheetStyle
+        </item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <item name="android:windowBackground">
+            @android:color/transparent
+        </item>
+
+    </style>
+
+    <!-- Bottom Sheet Style -->
+    <style name="TransparentBottomSheetStyle"
+        parent="Widget.MaterialComponents.BottomSheet.Modal">
+
+        <item name="android:background">
+            @android:color/transparent
+        </item>
+
+    </style>
+
+
+</resources>

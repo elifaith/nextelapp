@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_line"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/profileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="188dp">
+
+        <ImageView
+            android:id="@+id/drawer_header"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:alpha="0.4"
+            android:src="@drawable/header" />
+
+        <LinearLayout
+            android:id="@+id/space_bar_i"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent" >
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:padding="0dip">
+
+                <RadioButton
+                    android:id="@+id/btnFAQ"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/ic_faq_file"
+                    android:drawableTint="?attr/theme_black"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="onFAQClick"
+                    android:text="FAQs"
+                    android:textStyle="bold"
+                    android:textColor="?attr/theme_black"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/btnTerms"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/ic_terms"
+                    android:drawableTint="?attr/theme_black"
+                    android:gravity="center"
+                    android:text="Terms"
+                    android:textColor="?attr/theme_black"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:onClick="onTermsClick"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/btnPolicy"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/ic_policy"
+                    android:drawableTint="?attr/theme_black"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="onPolicyClick"
+                    android:text="Policy"
+                    android:textStyle="bold"
+                    android:textColor="?attr/theme_black"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/appSettings"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/md_settings"
+                    android:drawableTint="?attr/theme_black"
+                    android:gravity="center"
+                    android:textColor="?attr/theme_black"
+                    android:textStyle="bold"
+                    android:text="Settings"
+                    android:clickable="true"
+                    android:onClick="onSettingsClick"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_info_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space_bar_i"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="onProfileInfoClick"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_user"
+                android:background="@color/md_black"
+                android:transitionName="profilePic"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="@color/md_black"
+                app:strokeWidth="2dp" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="james@application.com"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:paddingEnd="5dp"
+                    android:textStyle="bold|italic"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/currentUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="16sp"
+                    android:paddingEnd="5dp"
+                    android:textStyle="bold|italic"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_below="@id/profile_info_bar"
+            android:layout_width="match_parent"
+            android:layout_height="6dp" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/llyLeftDrawer"
+        android:layout_below="@+id/profileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View android:background="@drawable/side_bar_image"
+            android:id="@+id/tobeset"
+            android:alpha="0.4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="240dp"
+                android:scrollbars="horizontal"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:background="@drawable/gt_holder"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/react_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/nav_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="4dp"
+            android:layout_marginLeft="30dp"
+            android:drawableTop="@drawable/share_icon"
+            android:text="Share"
+            android:clickable="true"
+            android:onClick="onShareApp"
+            android:textSize="10sp" />
+
+
+        <RadioButton
+            android:id="@+id/nav_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:layout_toEndOf="@id/nav_share"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/star_icon"
+            android:text="Rate us"
+            android:clickable="true"
+            android:onClick="onRateApp"
+            android:textSize="10sp" />
+
+
+        <RadioButton
+            android:id="@+id/nav_airdrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:layout_toEndOf="@id/nav_rate"
+            android:layout_marginLeft="10dp"
+            android:drawableTop="@drawable/airdrops"
+            android:drawablePadding="4dp"
+            android:text="Airdrops"
+            android:clickable="true"
+            android:onClick="onAirdrop"
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:id="@+id/nav_night_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/theme_toggle"
+            android:layout_gravity="right"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Night"
+            android:clickable="true"
+            android:onClick="onSettingsClick"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

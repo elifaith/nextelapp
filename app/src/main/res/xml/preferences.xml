@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_display_options">
+
+        <ListPreference
+            android:key="settings_display_options_size"
+            android:title="@string/settings_font_size"
+            android:summary="%s"
+            android:defaultValue="medium"
+            android:entries="@array/settings_display_options_size_entries"
+            android:entryValues="@array/settings_display_options_size_values" />
+
+        <ListPreference
+            android:key="theme"
+            android:title="App Theme"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="light"
+            android:summary="Choose app theme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_reminder">
+        <CheckBoxPreference
+            android:key="settings_reminder_enabled"
+            android:title="@string/settings_reminder"
+            android:summary="@string/settings_reminder_summary"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="username"
+            android:title="Username"
+            android:summary="Set your username"
+            android:dialogTitle="Enter your username" />
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Turn notifications on or off"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About us">
+
+        <Preference
+            android:title="@string/settings_website"
+            android:summary="@string/settings_website_summary"
+            android:persistent="false"
+            android:selectable="true">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/settings_website_url" />
+        </Preference>
+
+        <Preference
+            android:title="@string/settings_instagram"
+            android:summary="@string/settings_instagram_summary"
+            android:persistent="false"
+            android:selectable="true">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/settings_instagram_url" />
+        </Preference>
+
+        <Preference
+            android:title="@string/settings_github"
+            android:key="open_support"
+            android:summary="@string/settings_github_summary"
+            android:persistent="false"
+            android:selectable="true">
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

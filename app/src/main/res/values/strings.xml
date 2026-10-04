@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Nextel</string>
+    <string name="version">Version 2.4-beta</string>
+    <string name="games">"System games"</string>
+    <string name="about">About Us</string>
+    <string name="moto">Next-Gen Memecoin App</string>
+    <string name="developer">Made with &#10084; by Nextel connect</string>
+    <string name="upgradeLink">http://apps.nextelconnect.live/app.apk</string>
+    <string name="settings_website">Website</string>
+    <string translatable="false" name="settings_website_summary">nextelconnect.live</string>
+    <string translatable="false" name="settings_website_url">https://apps.nextelconnect.live</string>
+    <string translatable="false" name="telegram_link">https://t.me/lhmclassandcalls</string>
+
+    <string translatable="false" name="settings_instagram">Support link</string>
+    <string translatable="false" name="settings_instagram_summary">\@contact_support</string>
+    <string translatable="false" name="settings_instagram_url">https://t.me/nextelconnect_support01</string>
+
+    <string translatable="false" name="settings_github">Online chat</string>
+    <string translatable="false" name="settings_github_summary">\@Message_us</string>
+    <string translatable="false" name="settings_github_url">https://t.me/lhm_testimonies</string>
+    <string name="about_msg" formatted="false">
+        Nextel connect is a secure trading platform that enables you to earn and manage your assets with interest.
+        \Nextel connect is a full functional crypto platform and much more.
+        \n\n● Al-powered trading •Automated memecoins trading
+        \n● Real time signals and analytics \n● Minimal user effort required\n● AI bots execute trades within 24 hours
+    </string>
+    <string name="title_activity_visual">Visual Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_earnings">Earnings Settings</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">Pynith Limited</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="pref_title_earn_on_point">Earnings Type</string>
+    <string name="pref_title_enable_earnings">Enable Earnings</string>
+    <string name="pref_title_earn_on">Earning on Action</string>
+    <string name="pref_title_earning_award">Earnings Reward Type</string>
+    <string name="pref_enable_earnings_summary">Check to enable earnings on your activities from the platform within the app</string>
+    <string name="pref_title_earning_updates">Earning Updates</string>
+    <string name="pref_title_reward_time">Reward Account</string>
+    <string name="pref_earning_update_summary">Check to enable you get the best earnings practice and tips on how to earn more from your actions</string>
+    <string name="pref_title_reward_video">Google Reward Video</string>
+    <string name="pref_reward_video_summary">Check to enable Google Reward Video, Watch any rewards videos and earn points</string>
+    <string name="pref_ads_daily_limit">Ads Daily Limit</string>
+
+    <string name="settings_typeface">Typeface</string>
+    <string translatable="false" name="settings_typeface_andada">Andada</string>
+    <string translatable="false" name="settings_typeface_lato">Lato</string>
+    <string translatable="false" name="settings_typeface_pt_serif">PT Serif</string>
+    <string translatable="false" name="settings_typeface_pt_sans">PT Sans</string>
+
+    <string name="settings_font_size">Font size</string>
+    <string name="settings_font_size_tiny">Tiny</string>
+    <string name="settings_font_size_small">Small</string>
+    <string name="settings_font_size_medium">Medium</string>
+    <string name="settings_font_size_large">Large</string>
+    <string name="settings_font_size_huge">Huge</string>
+
+    <string name="settings_display_options">Display options</string>
+    <string name="settings_color_theme">Color theme</string>
+    <string name="settings_color_theme_light">Light</string>
+    <string name="settings_color_theme_sepia">Sepia</string>
+    <string name="settings_color_theme_dark">Dark</string>
+
+    <string name="settings_reminder">Daily Reminder</string>
+    <string name="settings_reminder_summary">Check to enable daily trading from Nextel connect reminder</string>
+    <string name="settings_reminder_time">Reminder Time</string>
+    <string name="reminder_message">This is to notify you of your daily task. Trading with Nextel connect</string>
+    <string name="settings_reminder_text">Time to Trade </string>
+    <string name="label">Select your Alarm input type from below:</string>
+    <string name="edit_text_hint">Input your Alarm time</string>
+
+    <string name="ans1">Security is our top priority. Nextel connect employs bank-grade security measures including multi-signature wallets, cold storage for funds, regular security audits, and advanced encryption to protect user assets and data.</string>
+    <string name="ans2">We have a rigorous vetting process for listing memecoins that includes security audits, liquidity assessments, community engagement metrics, and development team evaluation. This ensures that we list only quality projects while still providing access to the newest and most promising memecoins.</string>
+    <string name="ans3">The minimum trading amount on Nextel connect is 1 USD which is paired to 1 USDT.</string>
+    <string name="ans4">Yes, you can refer your friends with your username as your referral link. Your referral bonus is up to 5% of each trade. And can be withdrawn any time.</string>
+    <string name="ans5">Getting started is simple. Just click on Launch App, fill the register form, and you\'re ready to start trading. Our intuitive interface makes it easy for both beginners and experienced traders to navigate and execute trades.</string>
+    <string name="ans6">Simply write to our support team and any questions you have will be answered, or chat at the forum, or private message an admin</string>
+
+    <string name="qus1">Is Nextel connect Secure?</string>
+    <string name="qus2">How does Nextel connect select which memecoins to list?</string>
+    <string name="qus3">What is the minimum trading amount?</string>
+    <string name="qus4">Can I Refer Friend &amp; Family?</string>
+    <string name="qus5">How do I get started with Nextel connect?</string>
+    <string name="qus6">You Still Have Some Questions, You Like To Ask?</string>
+
+
+    <string name="referral">Referral Code [Optional]</string>
+    <string name="nickname">Display name</string>
+    <string name="sign_in">Sign up with</string>
+    <string name="tap_here">(Tap here)</string>
+    <string name="create_account">Email &amp; Password</string>
+    <string name="password">Enter Password</string>
+    <string name="done">DONE</string>
+    <string name="empty_field">Empty field</string>
+    <string name="loading">Loading, please wait…</string>
+    <string name="validate">Validating, please wait…</string>
+
+    <string name="phone">Phone</string>
+    <string name="twitter">Twitter</string>
+    <string name="github">GitHub</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="phone_sms">Phone SMS</string>
+    <string name="photo_tv">Tap to choose DP</string>
+    <string name="internet_error">Network exception, please check the network settings</string>
+
+    <string name="profile_setup">Profile setup</string>
+    <string name="google_trouble">Google troubles(</string>
+    <string name="twitter_trouble">Twitter troubles(</string>
+    <string name="facebook_trouble">Facebook troubles(</string>
+    <string name="server_trouble">Server troubles(</string>
+    <string name="select_photo">Select photo</string>
+    <string name="google_loading">Waiting for Google response…</string>
+    <string name="registering">Wait while you get registered …</string>
+    <string name="server_loading">Waiting for server response…</string>
+    <string name="phone_loading">Waiting for sms with code…</string>
+    <string name="user_not_found">User does not exist - Registering account now…</string>
+    <string name="register_new_user">User not found - Registering account now…</string>
+
+    <string name="srn_drawer_open">Open</string>
+    <string name="srn_drawer_close">Close</string>
+
+    <string name="srn_ex_no_menu_view">No view for menu provided. You must either call .withMenuView(View) or pass a valid resource id to .withMenuLayout(int)</string>
+    <string name="srn_ex_bad_content_view">Your content view must contain exactly one child. Make sure you call inject() after setContentView().</string>
+
+    <string name="userPolicies">\n\nGhanaTrust is very secure and is strictly peer to peer donation platform. GhanaTrust is NOT a licensed bank or a security firm, but a free will donation exchange platform for its members. \n\nYou agree that all information, communications, materials coming from GhanaTrust. COM are unsolicited and must be kept private, confidential and protected from any disclosure. Moreover, the information, communications and materials contained herein are not to be regarded as an offer, nor a solicitation for investments in any jurisdiction which deems non-public offers or solicitations unlawful, nor to any person to whom it will be unlawful to make such offer or solicitation. \n\nAll the data giving by a member to GhanaTrust will be only privately used and not disclosed to any third parties. WEALTH CONNECT is not responsible or liable for any loss of data. \n\nYou agree to hold all principals and members harmless of any liability. You are participating and donating at your own risk and you agree that a past performance is not an explicit guarantee for the same future performance. You agree that all information, communications and materials you will find on this site are intended to be regarded as an informational and educational matter and not an investment advice. \n\nGhanaTrust reserve the right to change the rules, commissions and rates of the program at any time and at our sole discretion without notice, especially in order to respect the integrity and security of the members interests. You agree that it is your sole responsibility to review the current terms. \n\nGhanaTrust is not responsible or liable for any damages, losses and costs resulting from any violation of the conditions and terms and/or use of our website by a member. You guarantee to GhanaTrust that you will not use this site in any illegal way and you agree to respect your local, national and international laws. \n\nDon’t post bad vote on Public Forums and at Gold Rating Site without contacting the administrator of GhanaTrust first. Maybe there was a technical problem with your transaction, so please always CLEAR the thing with the administrator. \n\nWe will not tolerate SPAM or any type of UCE (unsolicited commercial email) in this program. SPAM violators will be immediately and permanently removed from the program. \n\nYou understand and agree that GhanaTrust is only a platform for donation exchange between its members, and does not guarantee that you will receive donations from your provided donations. Donations given and donations received are strictly a function of participation of other members. \n\nYou understand and agree that all donations you will give to another member is voluntary. GhanaTrust and any other member shall not be liable for you to receive donations and returns, and that all donations given are non-refundable by the beneficiary member. \n\nGhanaTrust reserves the right to accept or decline any member for membership without explanation. \n\nIf you do not agree with the above disclaimer, please do not go any further</string>
+
+</resources>

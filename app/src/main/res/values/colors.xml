@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Shared Nextel palette: keep these values aligned with app.css and mini-app.css. -->
+    <color name="brand_primary">#18443E</color>
+    <color name="brand_primary_light">#48948A</color>
+    <color name="brand_secondary">#DCEB6A</color>
+    <color name="brand_background">#F4F1EA</color>
+    <color name="brand_surface">#FAF9F8</color>
+    <color name="brand_text">#1A1A1A</color>
+    <color name="brand_muted">#8C8C8C</color>
+    <color name="brand_border">#CACACA</color>
+    <color name="brand_danger">#FF3B30</color>
+    <color name="brand_primary_fade">#1A18443E</color>
+
+    <color name="dark_green">@color/brand_primary</color>
+    <color name="green_medium">#28584F</color>
+    <color name="green_light">#38655D</color>
+    <color name="yellow">@color/brand_secondary</color>
+    <color name="background">@color/brand_background</color>
+    <color name="text_black">@color/brand_text</color>
+    <color name="input_border">@color/brand_border</color>
+
+    <color name="nextel_black">#050505</color>
+    <color name="nextel_card">#101010</color>
+    <color name="nextel_input">#171717</color>
+    <color name="nextel_yellow">#F6C945</color>
+    <color name="nextel_white">#FFFFFF</color>
+    <color name="nextel_gray">#858585</color>
+
+    <color name="colorPrimary">@color/brand_primary</color>
+    <color name="colorPrimaryDark">@color/brand_primary</color>
+    <color name="colorAccent">@color/brand_secondary</color>
+    <color name="colorText">@color/brand_text</color>
+    <color name="colorWhite">@color/brand_surface</color>
+    <color name="colorRed">@color/brand_danger</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorSecondaryDark">@color/brand_primary</color>
+    <color name="colorSecondary">@color/brand_primary</color>
+    <color name="colorSecondaryLight">@color/brand_border</color>
+    <color name="colorSecondaryLighter">@color/brand_surface</color>
+    <color name="md_black">#D2D2D2</color>
+    <color name="cm_black">@color/brand_text</color>
+    <color name="txt_light">#9e9042</color>
+
+
+    <color name="bg_black">#0B0B0B</color>
+    <color name="card_bg">#121212</color>
+    <color name="accent_yellow">#E6FF00</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A6A06B</color>
+    <color name="divider">#1F1F1F</color>
+    <color name="danger_red">#FF3B30</color>
+
+    <color name="light_primary">@color/brand_primary</color>
+    <color name="light_primary_dark">@color/brand_primary</color>
+    <color name="light_secondary">@color/brand_secondary</color>
+    <color name="light_accent">@color/brand_secondary</color>
+    <color name="light_text">@color/brand_surface</color>
+    <color name="light_red">#B3FF3B30</color>
+    <color name="light_card_bg">@color/brand_surface</color>
+
+    <color name="dark_primary">#121212</color>
+    <color name="dark_primary_dark">#000000</color>
+    <color name="dark_secondary">#000000</color>
+    <color name="dark_accent">#595753</color>
+    <color name="dark_text">#F2F1F1</color>
+    <color name="dark_red">#B3121212</color>
+    <color name="dark_card_bg">#20000000</color>
+
+    <color name="blue_primary">#1565C0</color>
+    <color name="blue_primary_dark">#42A5F5</color>
+    <color name="blue_secondary">#42A5F5</color>
+    <color name="blue_accent">#8db3cb</color>
+    <color name="blue_text">#FFFFFF</color>
+    <color name="blue_red">#B31565C0</color>
+    <color name="blue_card_bg">#2042A5F5</color>
+
+</resources>

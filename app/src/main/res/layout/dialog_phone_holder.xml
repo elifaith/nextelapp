@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    android:background="@drawable/curve_stroke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/phone_holder"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:elevation="6dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/bg_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Register"
+        android:textColor="#fff" />
+
+</LinearLayout>
