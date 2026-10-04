@@ -180,6 +180,9 @@ class NextelApi(@Suppress("UNUSED_PARAMETER") context: Context) {
     companion object {
         private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
         private val httpClient: OkHttpClient = OkHttpClient.Builder()
+            // API requests read cookies (app_gate, web session) from the shared
+            // WebView cookie store instead of hard-coding a Cookie header.
+            .cookieJar(WebCookieJar)
             .connectTimeout(10, TimeUnit.SECONDS)
             .readTimeout(15, TimeUnit.SECONDS)
             .writeTimeout(15, TimeUnit.SECONDS)

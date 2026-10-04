@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import pynith.apps.nextel.helper.AppGateCookie
 import pynith.apps.nextel.helper.LogoutCoordinator
 import pynith.apps.nextel.helper.SessionService
 import pynith.apps.nextel.helper.UpdateCheckScheduler
@@ -23,6 +24,12 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
 
     override fun onCreate() {
         super.onCreate()
+
+        // The web domain rejects requests without the app_gate cookie, so it
+        // must already sit in the WebView cookie store before any component
+        // of this process (activity, service or worker) can perform the first
+        // request or navigation. Application.onCreate() always runs first.
+        AppGateCookie.ensureInstalled()
 
         userInfo = applicationContext.getSharedPreferences(
             PREF_NAME,

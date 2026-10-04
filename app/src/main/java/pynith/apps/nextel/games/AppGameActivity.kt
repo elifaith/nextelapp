@@ -1,9 +1,12 @@
 package pynith.apps.nextel.games
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.TypedValue
-import android.widget.*
-import androidx.core.view.setPadding
+import android.view.View
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.Toast
+import com.google.android.material.appbar.MaterialToolbar
 import pynith.apps.nextel.R
 import pynith.apps.nextel.games.widget.FeatureMiddleCardView
 import pynith.apps.nextel.games.widget.FeaturedCardSliverView
@@ -11,154 +14,94 @@ import pynith.apps.nextel.games.widget.FeaturedCardView
 import pynith.apps.nextel.games.widget.SmallFeatureCardView
 import pynith.apps.nextel.views.BaseActivity
 
+/** Games hub: lists the playable games and the ones that are still coming soon. */
 class AppGameActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_games)
 
-        val root = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            setBackgroundColor(R.attr.colorPrimaryDark)
+        findViewById<MaterialToolbar>(R.id.gamesToolbar).setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
 
-        // TOP BAR
-        val topBar = LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-            setPadding(16)
-        }
-
-        val menuBtn = ImageButton(this).apply {
-            setImageResource(R.drawable.left_arrow)
-            setBackgroundColor(0x00000000)
-            setBackgroundResource(
-                TypedValue().let {
-                    theme.resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, it, true)
-                    it.resourceId
-                }
-            )
-            setPadding(7)
-            setOnClickListener {
-                onBackPressedDispatcher.onBackPressed()
-            }
-        }
-
-        val title = TextView(this).apply {
-            setText(R.string.games)
-            textSize = 20f
-            setTextColor(0xFFFFFFFF.toInt())
-            setPadding(64, 8, 0, 0)
-        }
-
-        topBar.addView(menuBtn)
-        topBar.addView(title)
-
-        // CONTENT CONTAINER
-        val scrollView = ScrollView(this).apply {
-            setPadding(18,0,18,0)
-            setBackgroundResource(R.drawable.bg_game)
-            isVerticalScrollBarEnabled = false
-            isHorizontalScrollBarEnabled = false
-        }
-
-        val content = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            setPadding(0,38,0,0)
-        }
-
-        content.addView(
+        // Featured Ludo game — fully playable.
+        findViewById<FrameLayout>(R.id.featuredContainer).addView(
             FeaturedCardSliverView(
                 context = this,
                 imageRes = R.drawable.ludo,
                 title = "Featured Ludo Game",
-                subtitle = "This is a feature coming soon",
-                onClick = {
-                    showToast("Vip awesome Ludo game coming soon.")
-                }
+                subtitle = "Play the classic board game against three computer players.",
+                onClick = { openGame(LudoActivity::class.java) }
             )
         )
 
-        // HORIZONTAL LIST
-        val horizontalScroll = HorizontalScrollView(this).apply {
-            isVerticalScrollBarEnabled = false
-            isHorizontalScrollBarEnabled = false
-        }
-
-        val row = LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-        }
-
-        row.addView(
+        // Quick games row.
+        val smallRow = findViewById<LinearLayout>(R.id.smallRow)
+        smallRow.addView(
             SmallFeatureCardView(this, "Classic dice", R.drawable.ads_card2, "NEW") {
-                showToast("Amazing classic dice game coming soon.")
-            }
+                openGame(DiceActivity::class.java)
+            },
+            rowParams()
         )
-
-        row.addView(
+        smallRow.addView(
             SmallFeatureCardView(this, "The Wheel", R.drawable.ads_card3, "HOT") {
                 showToast("Thrilling wheel of fortune game coming soon.")
-            }
+            },
+            rowParams()
         )
-
-        row.addView(
+        smallRow.addView(
             SmallFeatureCardView(this, "Ne Zha Croco", R.drawable.ads_card4, "") {
-                showToast("New Awesome Nezha Croco game coming soon.")
-            }
+                showToast("New awesome Nezha Croco game coming soon.")
+            },
+            rowParams()
         )
 
-        horizontalScroll.addView(row)
-        content.addView(horizontalScroll)
-
-
-        // HORIZONTAL LIST
-        val hScroll = HorizontalScrollView(this).apply {
-            isVerticalScrollBarEnabled = false
-            isHorizontalScrollBarEnabled = false
-            setPadding(0,38,0,0)
-        }
-        val roll = LinearLayout(this).apply {
-            orientation = LinearLayout.HORIZONTAL
-        }
-
-        roll.addView(
-
+        // Board games row.
+        val middleRow = findViewById<LinearLayout>(R.id.middleRow)
+        middleRow.addView(
             FeatureMiddleCardView(this, "Ludo Games", R.drawable.ludo) {
-                showToast("Our awesome Ludo game coming soon.")
+                openGame(LudoActivity::class.java)
             }
         )
-
-        roll.addView(
+        middleRow.addView(
             FeatureMiddleCardView(this, "Hangman Words", R.drawable.hangman) {
-                showToast("Starters Hangman Game Coming Soon.")
+                showToast("Starter Hangman game coming soon.")
             }
         )
 
-        hScroll.addView(roll)
-        content.addView(hScroll)
-
-
-        // FEATURED CARD
-        content.addView(
+        // Coming soon feature.
+        findViewById<FrameLayout>(R.id.featuredBottomContainer).addView(
             FeaturedCardView(
                 context = this,
                 imageRes = R.drawable.hangman,
                 title = "Featured Hangman",
-                subtitle = "This is a feature coming soon",
+                subtitle = "This is a feature coming soon.",
                 onClick = {
-                    showToast("Hangman game advance words coming soon.")
+                    showToast("Hangman game with advanced words coming soon.")
                 }
             )
         )
-
-        scrollView.addView(content)
-
-        root.addView(topBar)
-        root.addView(scrollView)
-
-        setContentView(root)
     }
 
-    private fun showToast(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    private fun openGame(activityClass: Class<*>) {
+        startActivity(Intent(this, activityClass))
+        overridePendingTransition(R.anim.anim_pull_in_right, R.anim.fade_out)
     }
 
+    private fun rowParams(): LinearLayout.LayoutParams {
+        return LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply {
+            marginEnd = dp(14)
+        }
+    }
+
+    private fun dp(value: Int): Int =
+        (value * resources.displayMetrics.density).toInt()
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
 }

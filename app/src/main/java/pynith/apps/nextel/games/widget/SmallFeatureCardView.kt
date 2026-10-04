@@ -1,7 +1,7 @@
 package pynith.apps.nextel.games.widget
 
 import android.content.Context
-import android.provider.CalendarContract.Colors
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -68,4 +68,7 @@ class SmallFeatureCardView(
 
         setOnClickListener { onClick() }
     }
+
+    private fun dp(value: Int): Int =
+        (value * resources.displayMetrics.density).toInt()
 }

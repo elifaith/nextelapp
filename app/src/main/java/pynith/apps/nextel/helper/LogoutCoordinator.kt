@@ -98,6 +98,10 @@ object LogoutCoordinator {
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
         cookieManager.removeAllCookies {
+            // The wipe also removes the app_gate entry cookie every request to
+            // the web domain needs; reinstall it before anything can hit the
+            // domain again (signing back in or the WebView itself).
+            AppGateCookie.ensureInstalled()
             cookieManager.flush()
             WebStorage.getInstance().deleteAllData()
             onCleared()

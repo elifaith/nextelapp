@@ -65,4 +65,6 @@ class FeatureMiddleCardView(
         return true
     }
 
+    private fun dp(value: Int): Int =
+        (value * resources.displayMetrics.density).toInt()
 }

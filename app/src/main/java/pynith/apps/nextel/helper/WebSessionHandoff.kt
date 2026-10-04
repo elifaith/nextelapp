@@ -120,6 +120,9 @@ object WebSessionHandoff {
 
     private fun returnToNativeLogin(activity: Activity) {
         CookieManager.getInstance().removeAllCookies {
+            // The wipe also removes the app_gate entry cookie; put it back
+            // before the next request to the web domain (signing in again).
+            AppGateCookie.ensureInstalled()
             CookieManager.getInstance().flush()
             WebStorage.getInstance().deleteAllData()
             val intent = Intent(activity, LoginActivity::class.java).apply {
