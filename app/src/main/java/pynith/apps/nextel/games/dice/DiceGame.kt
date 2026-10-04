@@ -40,6 +40,10 @@ class DiceGame(context: Context) {
 
     interface Listener {
         fun onGameChanged(game: DiceGame)
+
+        /** Fired exactly once when a roll settles (win or lose). */
+        fun onRollSettled(game: DiceGame, win: Boolean)
+
         fun onAutoPlayFinished(game: DiceGame)
     }
 

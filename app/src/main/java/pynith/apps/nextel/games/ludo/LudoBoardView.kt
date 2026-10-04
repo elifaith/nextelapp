@@ -466,5 +466,6 @@ class LudoBoardView @JvmOverloads constructor(
     companion object {
         const val STAR = "★"
         val CROWNS = arrayOf("🥇", "🥈", "🥉")
+        val RANK_LABELS = arrayOf("1st", "2nd", "3rd")
     }
 }

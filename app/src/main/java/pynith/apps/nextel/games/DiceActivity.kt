@@ -7,8 +7,6 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.EditText
-import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.Spinner
@@ -104,7 +102,6 @@ class DiceActivity : BaseActivity(), DiceGame.Listener {
         render(game)
     }
 
-    @SuppressLint("InflateParams")
     private fun setupSelectors() {
         val row = findViewById<LinearLayout>(R.id.diceRow1)
         for (value in 1..4) {

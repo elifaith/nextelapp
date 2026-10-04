@@ -12,6 +12,9 @@ object SoundFx {
 
     private var tone: ToneGenerator? = null
 
+    /** Tone volume (0..100). */
+    private const val VOLUME = 80
+
     @Synchronized
     private fun play(toneType: Int, durationMs: Int) {
         try {
