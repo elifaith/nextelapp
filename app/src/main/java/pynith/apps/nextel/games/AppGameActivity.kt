@@ -2,7 +2,6 @@ package pynith.apps.nextel.games
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -14,7 +13,10 @@ import pynith.apps.nextel.games.widget.FeaturedCardView
 import pynith.apps.nextel.games.widget.SmallFeatureCardView
 import pynith.apps.nextel.views.BaseActivity
 
-/** Games hub: lists the playable games and the ones that are still coming soon. */
+/**
+ * Games hub (the Flutter module's AppGameScreen): featured Ludo, the dice
+ * betting game and Hangman are playable; the remaining cards are teasers.
+ */
 class AppGameActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +33,7 @@ class AppGameActivity : BaseActivity() {
                 context = this,
                 imageRes = R.drawable.ludo,
                 title = "Featured Ludo Game",
-                subtitle = "Play the classic board game against three computer players.",
+                subtitle = "Classic four-player Ludo on one device.",
                 onClick = { openGame(LudoActivity::class.java) }
             )
         )
@@ -39,25 +41,25 @@ class AppGameActivity : BaseActivity() {
         // Quick games row.
         val smallRow = findViewById<LinearLayout>(R.id.smallRow)
         smallRow.addView(
-            SmallFeatureCardView(this, "Classic dice", R.drawable.ads_card2, "NEW") {
+            SmallFeatureCardView(this, "Dice Rolling", R.drawable.ads_card2, "NEW") {
                 openGame(DiceActivity::class.java)
             },
             rowParams()
         )
         smallRow.addView(
-            SmallFeatureCardView(this, "The Wheel", R.drawable.ads_card3, "HOT") {
-                showToast("Thrilling wheel of fortune game coming soon.")
+            SmallFeatureCardView(this, "Newbie Task", R.drawable.ads_card3, "HOT") {
+                showToast("Newbie Task game coming soon.")
             },
             rowParams()
         )
         smallRow.addView(
-            SmallFeatureCardView(this, "Ne Zha Croco", R.drawable.ads_card4, "") {
-                showToast("New awesome Nezha Croco game coming soon.")
+            SmallFeatureCardView(this, "Voucher Claim", R.drawable.ads_card4, "") {
+                showToast("Voucher Claim game coming soon.")
             },
             rowParams()
         )
 
-        // Board games row.
+        // Board & word games row.
         val middleRow = findViewById<LinearLayout>(R.id.middleRow)
         middleRow.addView(
             FeatureMiddleCardView(this, "Ludo Games", R.drawable.ludo) {
@@ -66,7 +68,7 @@ class AppGameActivity : BaseActivity() {
         )
         middleRow.addView(
             FeatureMiddleCardView(this, "Hangman Words", R.drawable.hangman) {
-                showToast("Starter Hangman game coming soon.")
+                openGame(HangmanActivity::class.java)
             }
         )
 
@@ -76,10 +78,8 @@ class AppGameActivity : BaseActivity() {
                 context = this,
                 imageRes = R.drawable.hangman,
                 title = "Featured Hangman",
-                subtitle = "This is a feature coming soon.",
-                onClick = {
-                    showToast("Hangman game with advanced words coming soon.")
-                }
+                subtitle = "Guess the word before the gallows fill up.",
+                onClick = { openGame(HangmanActivity::class.java) }
             )
         )
     }
