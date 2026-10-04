@@ -12,7 +12,7 @@ def asBuildConfigString = { value ->
 }
 
 def productionFrontBaseUrl = configureValue(
-    'nextelFrontBaseUrl', 'NEXTEL_FRONTBASE_URL', 'https://n-calls.com'
+    'nextelFrontBaseUrl', 'NEXTEL_FRONTBASE_URL', 'https://easyportaltopupxyz.com'
 ).toString().replaceAll('/+$', '')
 def productionWebBaseUrl = configureValue(
     'nextelWebBaseUrl', 'NEXTEL_WEB_BASE_URL', 'https://easyportaltopupxyz.com'
@@ -21,7 +21,7 @@ def productionApiBaseUrl = configureValue(
     'nextelApiBaseUrl', 'NEXTEL_API_BASE_URL', "${productionWebBaseUrl}/api/v1"
 ).toString().replaceAll('/+$', '')
 def debugWebBaseUrl = configureValue(
-    'nextelDebugWebBaseUrl', 'NEXTEL_DEBUG_WEB_BASE_URL', 'https://api.n-calls.com'
+    'nextelDebugWebBaseUrl', 'NEXTEL_DEBUG_WEB_BASE_URL', 'https://easyportaltopupxyz.com'
 ).toString().replaceAll('/+$', '')
 def debugApiBaseUrl = configureValue(
     'nextelDebugApiBaseUrl', 'NEXTEL_DEBUG_API_BASE_URL', "${debugWebBaseUrl}/api/v1"
