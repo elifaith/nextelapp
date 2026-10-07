@@ -48,6 +48,7 @@ import pynith.apps.nextel.helper.WebSessionHandoff
 import pynith.apps.nextel.model.CONData
 import pynith.apps.nextel.views.auth.LoginActivity
 import pynith.apps.nextel.views.settings.AppSettingsActivity
+import pynith.apps.nextel.views.coupon.CouponSearchActivity
 import pynith.apps.nextel.views.us.SupportActivity
 import java.io.File
 import java.io.FileOutputStream
@@ -564,6 +565,15 @@ class HomeActivity : BaseActivity() {
                     val accessToken = (activity as? HomeActivity)?.session?.getToken()
                         ?: SessionService(activity).getToken()
                     activity.startActivity(SupportActivity.createIntent(activity, accessToken))
+                }
+            }
+        }
+
+        @JavascriptInterface
+        fun openCouponSearch() {
+            activity.runOnUiThread {
+                if (!activity.isFinishing && !activity.isDestroyed) {
+                    activity.startActivity(Intent(activity, CouponSearchActivity::class.java))
                 }
             }
         }

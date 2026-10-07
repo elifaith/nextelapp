@@ -33,6 +33,7 @@
         <item>Support</item>
         <item>Games</item>
         <item>About</item>
+        <item>Verify Token</item>
         <item />
         <item>Log Out</item>
     </string-array>
@@ -44,6 +45,7 @@
         <item>@drawable/customer_service</item>
         <item>@drawable/ic_games</item>
         <item>@drawable/ic_about</item>
+        <item>@drawable/ic_coupon</item>
         <item>0</item>
         <item>@drawable/ic_exit_app</item>
     </array>

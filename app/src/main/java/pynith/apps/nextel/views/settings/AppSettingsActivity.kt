@@ -3,6 +3,7 @@ package pynith.apps.nextel.views.settings
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.content.Intent
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
@@ -18,6 +19,7 @@ import androidx.core.content.ContextCompat
 import java.util.concurrent.Executor
 import pynith.apps.nextel.R
 import pynith.apps.nextel.views.us.SupportActivity
+import pynith.apps.nextel.views.coupon.CouponSearchActivity
 import pynith.apps.nextel.helper.AppConfig
 import androidx.core.content.edit
 import pynith.apps.nextel.App
@@ -169,7 +171,12 @@ class AppSettingsActivity : BaseActivity() {
         findViewById<View>(R.id.btnLogout).setOnClickListener {
             App.logout(this)
         }
-
+		
+        /// COUPON
+        findViewById<View>(R.id.btnCoupon).setOnClickListener {
+            startActivity(Intent(this, CouponSearchActivity::class.java))
+        }
+		
         /// SUPPORT
         findViewById<View>(R.id.btnSupport).setOnClickListener {
             startActivity(SupportActivity.createIntent(this, session.getToken()))

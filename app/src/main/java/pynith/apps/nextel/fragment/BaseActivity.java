@@ -49,6 +49,7 @@ import pynith.apps.nextel.model.CONData;
 import pynith.apps.nextel.model.User;
 import pynith.apps.nextel.views.main.HomeActivity;
 import pynith.apps.nextel.views.settings.AppSettingsActivity;
+import pynith.apps.nextel.views.coupon.CouponSearchActivity;
 import pynith.apps.nextel.views.us.AboutActivity;
 import pynith.apps.nextel.views.us.ActivityFAQs;
 import pynith.apps.nextel.views.us.PrivacyActivity;
@@ -63,7 +64,8 @@ public abstract class BaseActivity extends pynith.apps.nextel.views.BaseActivity
     private static final int POS_SUPPORT = 3;
     private static final int POS_GAMES = 4;
     private static final int POS_ABOUT = 5;
-    private static final int POS_LOGOUT = 7;
+    private static final int POS_COUPON = 6;
+    private static final int POS_LOGOUT = 8;
 
     private BottomSheetDialog mBottomMoreDialog;
     public static SharedPreferences userInfo;
@@ -206,6 +208,7 @@ public abstract class BaseActivity extends pynith.apps.nextel.views.BaseActivity
                 createItemFor(POS_SUPPORT),
                 createItemFor(POS_GAMES),
                 createItemFor(POS_ABOUT),
+                createItemFor(POS_COUPON),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
         adapter.setListener(this);
@@ -369,6 +372,12 @@ public abstract class BaseActivity extends pynith.apps.nextel.views.BaseActivity
         if (position == POS_ABOUT) {
             slidingRootNav.closeMenu(isTrue);
             startActivity( new Intent(mCActivity, AboutActivity.class) );
+            overridePendingTransition(R.anim.anim_pull_in_right, R.anim.fade_out);
+        }
+
+        if (position == POS_COUPON) {
+            slidingRootNav.closeMenu(isTrue);
+            startActivity( new Intent(mCActivity, CouponSearchActivity.class) );
             overridePendingTransition(R.anim.anim_pull_in_right, R.anim.fade_out);
         }
 

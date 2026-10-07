@@ -12,19 +12,19 @@ def asBuildConfigString = { value ->
 }
 
 def productionFrontBaseUrl = configureValue(
-    'nextelFrontBaseUrl', 'NEXTEL_FRONTBASE_URL', 'https://easyportaltopupxyz.com'
+        'nextelFrontBaseUrl', 'NEXTEL_FRONTBASE_URL', 'https://easyportaltopupxyz.com'
 ).toString().replaceAll('/+$', '')
 def productionWebBaseUrl = configureValue(
-    'nextelWebBaseUrl', 'NEXTEL_WEB_BASE_URL', 'https://easyportaltopupxyz.com'
+        'nextelWebBaseUrl', 'NEXTEL_WEB_BASE_URL', 'https://easyportaltopupxyz.com'
 ).toString().replaceAll('/+$', '')
 def productionApiBaseUrl = configureValue(
-    'nextelApiBaseUrl', 'NEXTEL_API_BASE_URL', "${productionWebBaseUrl}/api/v1"
+        'nextelApiBaseUrl', 'NEXTEL_API_BASE_URL', "${productionWebBaseUrl}/api/v1"
 ).toString().replaceAll('/+$', '')
 def debugWebBaseUrl = configureValue(
-    'nextelDebugWebBaseUrl', 'NEXTEL_DEBUG_WEB_BASE_URL', 'https://api.n-calls.com'
+        'nextelDebugWebBaseUrl', 'NEXTEL_DEBUG_WEB_BASE_URL', 'https://api.n-calls.com'
 ).toString().replaceAll('/+$', '')
 def debugApiBaseUrl = configureValue(
-    'nextelDebugApiBaseUrl', 'NEXTEL_DEBUG_API_BASE_URL', "${debugWebBaseUrl}/api/v1"
+        'nextelDebugApiBaseUrl', 'NEXTEL_DEBUG_API_BASE_URL', "${debugWebBaseUrl}/api/v1"
 ).toString().replaceAll('/+$', '')
 
 
@@ -33,7 +33,7 @@ def releaseStorePassword = configureValue('NEXTEL_RELEASE_STORE_PASSWORD', 'NEXT
 def releaseKeyAlias = configureValue('NEXTEL_RELEASE_KEY_ALIAS', 'NEXTEL_RELEASE_KEY_ALIAS', 'nextel')
 def releaseKeyPassword = configureValue('NEXTEL_RELEASE_KEY_PASSWORD', 'NEXTEL_RELEASE_KEY_PASSWORD', '1qa2ws3ed')
 def hasReleaseSigning = [releaseStoreFile, releaseStorePassword, releaseKeyAlias, releaseKeyPassword]
-    .every { it != null && !it.toString().trim().isEmpty() }
+        .every { it != null && !it.toString().trim().isEmpty() }
 
 android {
     namespace = "pynith.apps.nextel"

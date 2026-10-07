@@ -76,11 +76,28 @@
         <activity android:name=".views.settings.AppSettingsActivity" />
         <activity android:name=".views.main.StoreActivity" />
 
+        <activity
+            android:name=".views.coupon.CouponSearchActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
         <activity android:name=".games.AppGameActivity" />
 
-        <activity android:name=".games.LudoActivity" />
+        <activity
+            android:name=".games.LudoActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".games.DiceActivity" />
+        <activity
+            android:name=".games.DiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".games.HangmanActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".games.ScoresActivity"
+            android:screenOrientation="portrait" />
 
         <activity android:name=".views.us.ActivityFAQs" />
 

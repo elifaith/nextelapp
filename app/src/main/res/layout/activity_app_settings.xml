@@ -76,6 +76,9 @@
                             <include layout="@layout/card_font"
                                 android:visibility="visible"/>
 
+                            <!-- COUPON -->
+                            <include layout="@layout/card_coupon"/>
+
                             <!-- SUPPORT -->
                             <include layout="@layout/card_support"/>
 
